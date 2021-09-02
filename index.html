@@ -68,7 +68,7 @@
     var leave = document.getElementById("leave");
     var come = document.getElementById("come");
     var date02 = new Date();
-    day = date02.getDay().toString().padStart(2, "0");
+    day = date02.getDate().toString().padStart(2, "0");
     month = (date02.getMonth() + 1).toString().padStart(2, "0");
     year = date02.getFullYear().toString()
     leave.innerHTML = year + "-" + month + "-" + day + " 07:00";
