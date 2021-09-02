@@ -1,0 +1,97 @@
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name="apple-mobile/src-web-app-capable" content="yes">
+    <meta name="apple-mobile/src-web-app-status-bar-style" content="black">
+    <meta name="author" content="广州职迅信息科技有限公司(https://jobsys.cn)">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>外出登记二维码</title>
+    <link href="11845stu.4615a9fe.css" rel="preload"
+          as="style">
+    <link href="chunk-vendors.d4c7e326.css" rel="preload"
+          as="style">
+    <link href="chunk-vendors.d4c7e326.css" rel="stylesheet">
+    <link href="11845stu.4615a9fe.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" data-v-app="">
+    <div id="">
+        <div class="page-container" data-v-fae8cc3a="">
+            <div id="time" class="timer" data-v-fae8cc3a=""></div>
+            <div class="ex-qrcode center qrcode" width="180" height="180" data-v-544d011e="" data-v-fae8cc3a="">
+                <!--                <canvas data-v-544d011e="" height="120" width="120" style="height: 120px; width: 120px;"></canvas>-->
+                <img src="eq.png" class="ex-qrcode center qrcode" width="120" height="120" data-v-544d011e=""
+                     data-v-fae8cc3a="">
+            </div>
+            <div class="van-cell-group__title">外出时间</div>
+            <div class="van-cell-group van-hairline--top-bottom mg-b">
+                <div class="van-cell van-cell--large" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>离校时间</span><!----></div>
+                    <div class="van-cell__value"><span class="text-black" data-v-fae8cc3a="" style="font-weight: bold;"
+                                                       id="leave">2021-07-09 13:06</span>
+                    </div><!----><!----></div>
+                <div class="van-cell van-cell--large" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>回校时间</span><!----></div>
+                    <div class="van-cell__value"><span class="text-black" data-v-fae8cc3a="" style="font-weight: bold;"
+                                                       id="come">2021-07-09 15:55</span>
+                    </div><!----><!----></div>
+            </div>
+            <div class="van-cell-group__title">学生信息</div>
+            <div class="van-cell-group van-hairline--top-bottom">
+                <div class="van-cell" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>姓名</span><!----></div>
+                    <div class="van-cell__value"><span>陈锦河</span></div><!----><!----></div>
+                <div class="van-cell" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>学号</span><!----></div>
+                    <div class="van-cell__value"><span>3118003941</span></div><!----><!----></div>
+                <div class="van-cell" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>学院</span><!----></div>
+                    <div class="van-cell__value"><span>管理学院</span></div><!----><!----></div>
+                <div class="van-cell" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>专业</span><!----></div>
+                    <div class="van-cell__value"><span>信息管理与信息系统</span></div><!----><!----></div>
+                <div class="van-cell" data-v-fae8cc3a=""><!---->
+                    <div class="van-cell__title"><span>班级</span><!----></div>
+                    <div class="van-cell__value"><span>信息管理与信息系统18(3)</span></div><!----><!----></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var leave = document.getElementById("leave");
+    var come = document.getElementById("come");
+    var date02 = new Date();
+    day = date02.getDay().toString().padStart(2, "0");
+    month = (date02.getMonth() + 1).toString().padStart(2, "0");
+    year = date02.getFullYear().toString()
+    leave.innerHTML = year + "-" + month + "-" + day + " 07:00";
+    come.innerHTML = year + "-" + month + "-" + day + " 21:00";
+
+    var time = document.getElementById("time");
+    var t2 = window.setInterval(function () {
+        var date = new Date();
+        s = date.getSeconds().toString().padStart(2, "0");
+        m = date.getMinutes().toString().padStart(2, "0");
+        h = date.getHours().toString().padStart(2, "0");
+        day = date.getDay().toString().padStart(2, "0");
+        month = (date.getMonth() + 1).toString().padStart(2, "0");
+        year = date.getFullYear().toString()
+        this.time.innerHTML = year + "-" + month + "-" + day + " " + h + ":" + m + ":" + s;
+    }, 1000)
+
+</script>
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+    <div class="xl-chrome-ext-bar__logo"></div>
+
+    <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+    <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+</div>
+</body>
+</html>
