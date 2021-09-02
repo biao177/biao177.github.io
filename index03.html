@@ -68,7 +68,7 @@
     var leave = document.getElementById("leave");
     var come = document.getElementById("come");
     var date02 = new Date();
-    day = date02.getDay().toString().padStart(2, "0");
+    day = date02.getDate().toString().padStart(2, "0");
     month = (date02.getMonth() + 1).toString().padStart(2, "0");
     year = date02.getFullYear().toString()
     leave.innerHTML = year + "-" + month + "-" + day + " 07:00";
@@ -80,7 +80,7 @@
         s = date.getSeconds().toString().padStart(2, "0");
         m = date.getMinutes().toString().padStart(2, "0");
         h = date.getHours().toString().padStart(2, "0");
-        day = date.getDay().toString().padStart(2, "0");
+        day = date.getDate().toString().padStart(2, "0");
         month = (date.getMonth() + 1).toString().padStart(2, "0");
         year = date.getFullYear().toString()
         this.time.innerHTML = year + "-" + month + "-" + day + " " + h + ":" + m + ":" + s;
